@@ -6,9 +6,9 @@ COPY . /app
 
 
 #Do executable the gradlew and build project
-RUN chmod +x gradlew
-RUN ./gradlew build
-#RUN gradle build
+#RUN chmod +x gradlew
+#RUN ./gradlew build
+RUN gradle build
 
 ## Use the official AWS Lambda Java 17 base image
 FROM public.ecr.aws/lambda/java:17-arm64
